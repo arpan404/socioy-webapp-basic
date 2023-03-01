@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(15, 15, 15);
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.users-shared-moments-container {
+    width: 100%;
+    max-width: 600px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 0.5px solid rgb(56, 56, 56);
+    border-radius: 12px;
+    display: flex;
+    height: fit-content;
+    padding: 15px 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.main-body-section {
+    padding-top: 70px;
+    width: 100%;
+}
+
+.moments-main-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.moment-user-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 90px;
+    min-width: 90px;
+}
+
+.moment-user-profile {
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 80px;
+    min-height: 80px;
+    border-radius: 40px;
+    user-select: none;
+}
+
+.has-moment {
+    border: 3px solid rgb(255, 0, 0);
+    padding: 4px;
+    user-select: none;
+}
+
+.moment-user-username {
+    margin-top: 2px;
+    font-size: 10px;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    color: rgb(255, 255, 255);
+}
+
+.moment-self-user-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90px;
+    min-width: 90px;
+    user-select: none;
+    margin: 0px 5px;
+}
+
+.moment-self-user-profile {
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 80px;
+    min-height: 80px;
+    border-radius: 40px;
+    position: relative;
+    user-select: none;
+}
+
+.moment-self-user-username {
+    margin-top: 2px;
+    font-size: 13px;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.add-moment-button {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    max-height: 45px;
+    max-width: 80px;
+    min-height: 45px;
+    min-width: 80px;
+    bottom: 21px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.add-moment-button i {
+    font-size: 22px;
+    position: relative;
+    top: 1px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.moment-text {
+    position: absolute;
+    bottom: 27px;
+    font-size: 10px;
+    font-weight: 600;
+    right: 25px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.moment-self-user-profile:hover {
+    cursor: pointer;
+}
+
+.moment-file-picker {
+    width: 80px;
+    height: 50px;
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    position: absolute;
+    bottom: 19px;
+    right: 10px;
+    opacity: 0;
+    z-index: 900;
+    cursor: pointer;
+
+}
+
+.moment-file-picker:hover {
+    cursor: pointer;
+}
+
+.next-button-moments {
+    z-index: 800;
+    display: none;
+    padding-right: 3px;
+    position: absolute;
+    right: 0px;
+    max-width: fit-content;
+}
+
+.previous-button-moments {
+    display: none;
+    z-index: 800;
+    padding-left: 3px;
+    position: absolute;
+    left: 0px;
+    max-width: fit-content;
+}
+
+.moment-button-container {
+    width: 600px;
+    max-width: 100%;
+    position: absolute;
+    height: 120px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    color: rgb(246, 246, 246);
+}
+
+.moment-button-container div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.next-button-moments div,
+.previous-button-moments div {
+    font-size: 40px;
+    background-color: rgb(70, 70, 70);
+    padding: 10px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.next-button-moments div:hover,
+.previous-button-moments div:hover {
+    cursor: pointer;
+    background-color: rgb(52, 52, 52);
+}
+
+.next-button-moments div:active,
+.previous-button-moments div:active {
+    cursor: pointer;
+    background-color: rgb(72, 72, 72);
+}
+
+
+.moment-post-box {
+    background-color: rgb(11, 11, 11);
+    min-height: 300px;
+    z-index: 950;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.moment-post-box-container {
+    display: none;
+    justify-content: center;
+    top: 0;
+    position: absolute;
+    padding-top: 15px;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    overflow-y: scroll;
+    align-items: center;
+}
+
+.moment-upload-image {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 10px;
+}
+
+.moment-upload-image-container {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.moment-upload-caption-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.moment-upload-caption {
+    width: 100%;
+    padding: 10px;
+    color: rgb(216, 216, 216);
+    resize: none;
+    border-radius: 8px;
+    min-height: 50px;
+    outline: none;
+    border: 0.5px solid rgb(49, 49, 49);
+    background-color: rgb(34, 34, 34);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.upload-letter-count {
+    font-size: 12px;
+    position: relative;
+    max-height: fit-content;
+    color: rgb(216, 216, 216);
+    margin-top: -5px;
+    padding-left: 15px;
+
+}
+
+.moment-upload-caption::placeholder {
+    color: rgb(127, 127, 127);
+    font-weight: 800;
+}
+
+.moment-upload-button {
+    padding: 5px 12px;
+    height: fit-content;
+    background-color: rgb(57, 139, 255);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    width: calc(100% - 55px);
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.moment-cancel-button {
+    font-size: 35px;
+    background-color: rgb(255, 54, 54);
+    padding: 0px 5px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: rgb(242, 242, 242);
+    cursor: pointer;
+    user-select: none;
+}
+
+.moment-upload-button:hover {
+    background-color: rgb(39, 126, 248);
+
+}
+
+.moment-cancel-button:hover {
+    background-color: rgb(251, 32, 32);
+
+}
+
+.moment-upload-button:active {
+    background-color: rgb(61, 142, 255);
+
+}
+
+.moment-cancel-button:active {
+    background-color: rgb(253, 61, 61);
+
+}
+
+.moment-upload-button-container {
+    padding: 10px 20px 20px 20px;
+    display: flex;
+}
+
+.overlay-for-post-modal.active {
+    background-color: rgb(40, 40, 40, 0.3);
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    z-index: 900;
+    position: absolute;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    top: 0;
+}
+
+.rocker {
+    display: inline-block;
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #888;
+    width: 7em;
+    height: 4em;
+    overflow: hidden;
+    border-bottom: 0.5em solid rgb(232, 232, 232);
+    border-radius: 4px;
+}
+
+.rocker-small {
+    font-size: 0.4em;
+    margin: 1em;
+}
+
+.rocker::before {
+    content: "";
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999;
+    border: 0.5em solid rgb(232, 232, 232);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 0;
+}
+
+.checkbox-post-option {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-left,
+.switch-right {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5em;
+    width: 3em;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.switch-left {
+    height: 2.4em;
+    width: 2.75em;
+    left: 0.85em;
+    bottom: 0.4em;
+    background-color: #ddd;
+    transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+    right: 0.5em;
+    bottom: 0;
+    background-color: #ff4e4e;
+    color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+    content: "";
+    position: absolute;
+    width: 0.4em;
+    height: 2.45em;
+    bottom: -0.45em;
+    background-color: #ccc;
+    transform: skewY(-65deg);
+}
+
+.switch-left::before {
+    left: -0.4em;
+}
+
+.switch-right::before {
+    right: -0.375em;
+    background-color: transparent;
+    transform: skewY(65deg);
+}
+
+.checkbox-post-option:checked+.switch-left {
+    background-color: #4e80fe;
+    color: #fff;
+    bottom: 0px;
+    left: 0.5em;
+    height: 2.5em;
+    width: 3em;
+    transform: rotate(0deg) skewX(0deg);
+}
+
+.checkbox-post-option:checked+.switch-left::before {
+    background-color: transparent;
+    width: 3.0833em;
+}
+
+.checkbox-post-option:checked+.switch-left+.switch-right {
+    background-color: #ddd;
+    color: #888;
+    bottom: 0.4em;
+    right: 0.8em;
+    height: 2.4em;
+    width: 2.75em;
+    transform: rotate(-15deg) skewX(-15deg);
+}
+
+.checkbox-post-option:checked+.switch-left+.switch-right::before {
+    background-color: #ccc;
+}
+
+.checkbox-post-option:focus+.switch-left {
+    color: #333;
+}
+
+.checkbox-post-option:checked:focus+.switch-left {
+    color: #fff;
+}
+
+.checkbox-post-option:focus+.switch-left+.switch-right {
+    color: #fff;
+}
+
+.checkbox-post-option:checked:focus+.switch-left+.switch-right {
+    color: #333;
+}
+
+.post-option-container {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.post-option-container .frnds-text {
+    color: rgb(218, 218, 218);
+    font-size: 12px;
+}
+
+
+.no-moments-found {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+.no-moments-found div {
+    border: #3b3b3b 0.5px solid;
+    width: 600px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.no-moments-found div span {
+    color: rgb(228, 228, 228);
+
+}
+
+
+@media only screen and (max-width:700px) {
+    .users-shared-moments-container {
+        background-color: rgba(17, 17, 17, 0);
+        border: 0px solid rgb(56, 56, 56);
+    }
+
+    .main-body-section {
+        padding-top: 50px;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,228 @@
+body {
+    background-color: rgb(41, 41, 41);
+    min-height: 100vh;
+}
+
+.signup-input-field {
+    background-color: rgb(114, 114, 114);
+    color: white;
+    width: 100%;
+    font-size: 14px;
+}
+
+.signup-input-field::placeholder {
+    color: rgb(236, 236, 236);
+    font-size: 14px;
+}
+
+.password-input-field {
+    padding-right: 34px !important;
+}
+
+.signup-box-container {
+    background-color: rgb(59, 59, 59);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.signup-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    background-color: rgb(255, 54, 54);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    user-select: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+.signup-btn:hover {
+    background-color: rgb(255, 22, 22);
+    transition: ease-in-out 300ms;
+    cursor: pointer;
+}
+
+.signup-btn:active {
+    background-color: rgb(255, 70, 70);
+    transition: ease-in-out 100ms;
+}
+
+.login-btn {
+    width: 100%;
+    max-width: fit-content;
+    height: 40px;
+    margin-top: 20px;
+    background-color: rgb(74, 107, 255);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 0px 20px;
+    font-weight: 600;
+    user-select: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.loadingContainer div {
+    width: fit-content;
+    max-width: fit-content;
+}
+
+.loadingContainer div svg {
+    width: 100%;
+    max-width: fit-content;
+    height: 18px;
+    margin-top: 27px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 0px 20px;
+    font-weight: 600;
+    user-select: none;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+    background-color: rgb(53, 90, 255);
+    transition: ease-in-out 300ms;
+}
+
+.login-btn:active {
+    background-color: rgb(86, 117, 255);
+    transition: ease-in-out 100ms;
+}
+
+.password-btn {
+    position: absolute;
+    right: 30px;
+    top: 95px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.signup-site-name {
+    font-size: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+.signup-site-name span {
+    color: rgb(255, 54, 54);
+}
+
+.signup-text {
+    color: rgb(220, 220, 220);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.signup-body-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 80px;
+    min-height: 80vh;
+    align-items: center;
+    padding: 10px;
+}
+
+.signup-text-container {
+    max-width: 500px !important;
+    width: 100%;
+}
+
+@media only screen and (max-width : 1023px) {
+
+    .signup-body-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        padding: 10px;
+        max-width: 500px;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        min-height: 0px !important;
+    }
+
+    .signup-text-container {
+        padding: 0px 10px;
+    }
+
+    .signup-site-name {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .signup-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .signup-box-container {
+        background-color: rgba(0, 0, 0, 0);
+        padding: 5px;
+    }
+
+    .signup-site-name {
+        font-size: 50px;
+    }
+
+    .signup-text-container {
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .signup-text {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .password-btn {
+        position: absolute;
+        right: 15px;
+        top: 80px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+
+    }
+
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}

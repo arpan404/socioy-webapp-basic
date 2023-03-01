@@ -1,0 +1,43 @@
+.main-container-404{
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-404-text{
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgb(239, 239, 239);
+}
+.non-text{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(239, 239, 239);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+}
+.home-btn-404{
+    display: flex;
+    justify-content: center;
+}
+.home-btn-404 button{
+    color: white;
+    background-color: rgb(72, 121, 255);
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+.home-btn-404 button:hover{
+    background-color: rgb(59, 111, 255);
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.home-btn-404 button:active{
+    background-color: rgb(92, 136, 255);
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
